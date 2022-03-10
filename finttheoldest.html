@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    
+
+    <script>
+
+const people = [
+      {
+        name: "Carly",
+        yearOfBirth: 2018,
+      },
+      {
+        name: "Ray",
+        yearOfBirth: 1962,
+        yearOfDeath: 2011,
+      },
+      {
+        name: "Jane",
+        yearOfBirth: 1912,
+        yearOfDeath: 1941,
+      },
+    ]
+
+      let verivicaFechas = 0; 
+
+      let añoNacimiento0 = people[0].yearOfBirth;
+      let añoMuerte0 = people[0].yearOfDeath;
+      let restaTiempo0 = añoMuerte0 - añoNacimiento0;
+      console.log(añoNacimiento0);
+      console.log(añoMuerte0);
+      console.log(restaTiempo0);
+
+      let añoNacimiento1 = people[1].yearOfBirth;
+      let añoMuerte1 = people[1].yearOfDeath;
+      let restaTiempo1 = añoMuerte1 - añoNacimiento1;
+      console.log(añoNacimiento1);
+      console.log(añoMuerte1);
+      console.log(restaTiempo1);
+
+      let añoNacimiento2 = people[2].yearOfBirth;
+      let añoMuerte2 = people[2].yearOfDeath;
+      let restaTiempo2 = añoMuerte2 - añoNacimiento2;
+      console.log(añoNacimiento2);
+      console.log(añoMuerte2);
+      console.log(restaTiempo2);
+
+      let arrayFechas = [restaTiempo0,restaTiempo1,restaTiempo2];
+
+      console.log(arrayFechas);
+
+      for(let i =0;i<arrayFechas;i++){
+
+        verivicaFechas = arrayFechas[i];
+        if(verivicaFechas >= restaTiempo0){
+
+        
+        } else if (verivicaFechas >= restaTiempo1){
+
+
+        } else if(verivicaFechas >= restaTiempo2){
+
+            
+        }
+
+      }
+   
+      let fechActual=0;
+      const fechasMap = people.map(function(fecha){
+
+        if(fecha.yearOfDeath == void(0)){
+          let yearActual = 0;
+         fechActual = new Date();
+        let añoActual = fechActual.getFullYear();
+        console.log(añoActual);
+        console.log(typeof añoActual);
+        let restaAños = fecha.añoActual-fecha.yearOfBirth;
+        console.log(restaAños);
+        console.log(typeof restaAños);
+       for(let i = 0;i<people.length;i++){
+
+        people[i].yearActual = añoActual;
+       
+        console.log(people[i]);
+         
+        }
+        
+        let años = fecha.yearActual-fecha.yearOfBirth
+        console.log(años);
+        
+        }
+      return (fecha.yearOfDeath-fecha.yearOfBirth);
+
+
+      });  
+
+const fechas = people.map(function(fecha){
+
+  return (fecha.yearOfDeath-fecha.yearOfBirth);
+
+
+}).reduce(function(a,b){
+
+  let maxNum = Math.max(a,b)
+  console.log(people);
+  console.log(maxNum);
+  console.log(typeof maxNum)
+  return maxNum;
+  
+});
+
+console.log(fechas);
+console.log(fechasMap);
+let dato =0;
+  for(let i = 0; i<fechasMap.length;i++){
+    dato = fechasMap[i];
+    
+    if(dato === fechas){
+
+      console.log(i);
+      console.log(people[i]);
+    }
+  }
+
+
+
+
+
+
+/*const people = [
+      {
+        name: "Carly",
+        yearOfBirth: 2018,
+      },
+      {
+        name: "Ray",
+        yearOfBirth: 1962,
+        yearOfDeath: 2011,
+      },
+      {
+        name: "Jane",
+        yearOfBirth: 1912,
+        yearOfDeath: 1941,
+      },
+    ]
+
+      let verivicaFechas = 0; 
+
+      let añoNacimiento0 = people[0].yearOfBirth;
+      let añoMuerte0 = people[0].yearOfDeath;
+      let restaTiempo0 = añoMuerte0 - añoNacimiento0;
+      console.log(añoNacimiento0);
+      console.log(añoMuerte0);
+      console.log(restaTiempo0);
+
+      let añoNacimiento1 = people[1].yearOfBirth;
+      let añoMuerte1 = people[1].yearOfDeath;
+      let restaTiempo1 = añoMuerte1 - añoNacimiento1;
+      console.log(añoNacimiento1);
+      console.log(añoMuerte1);
+      console.log(restaTiempo1);
+
+      let añoNacimiento2 = people[2].yearOfBirth;
+      let añoMuerte2 = people[2].yearOfDeath;
+      let restaTiempo2 = añoMuerte2 - añoNacimiento2;
+      console.log(añoNacimiento2);
+      console.log(añoMuerte2);
+      console.log(restaTiempo2);
+
+      let arrayFechas = [restaTiempo0,restaTiempo1,restaTiempo2];
+
+      console.log(arrayFechas);
+
+      for(let i =0;i<arrayFechas;i++){
+
+        verivicaFechas = arrayFechas[i];
+        if(verivicaFechas >= restaTiempo0){
+
+        
+        } else if (verivicaFechas >= restaTiempo1){
+
+
+        } else if(verivicaFechas >= restaTiempo2){
+
+            
+        }
+
+      }
+   
+      let fechActual=0;
+
+      let yearActual = 0;
+         fechActual = new Date();
+        let añoActual = fechActual.getFullYear();
+        console.log(añoActual);
+        console.log(typeof añoActual);
+       /* let restaAños = fecha.añoActual-fecha.yearOfBirth;*/
+      /*  console.log(restaAños);
+        console.log(typeof restaAños);*/
+       /*for(let i = 0;i<people.length;i++){
+
+        people[i].yearActual = añoActual;
+       
+        console.log(people[i]);
+         
+        };
+
+      const fechasMap = people.map(function(fecha){
+
+        if(fecha.yearOfDeath == void(0)){
+          
+        
+        
+        console.log(fecha.yearActual-fecha.yearOfBirth);
+        return (fecha.yearActual-fecha.yearOfBirth);
+        }
+      return (fecha.yearOfDeath-fecha.yearOfBirth);
+
+
+      });  
+
+const fechas = people.map(function(fecha){
+
+  return (fecha.yearOfDeath-fecha.yearOfBirth);
+
+
+}).reduce(function(a,b){
+
+  let maxNum = Math.max(a,b)
+  console.log(people);
+  console.log(maxNum);
+  console.log(typeof maxNum)
+  return maxNum;
+  
+});
+
+console.log(fechas);
+console.log(fechasMap);
+let dato =0;
+  for(let i = 0; i<fechasMap.length;i++){
+    dato = fechasMap[i];
+    
+    if(dato === fechas){
+
+      console.log(i);
+      console.log(people[i]);
+    }
+  }*/
+
+
+    </script>
+</body>
+</html>
