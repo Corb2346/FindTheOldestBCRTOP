@@ -13,15 +13,15 @@
 
         
 const people = [
-    {
+      {
         name: "Carly",
-        yearOfBirth: 1942,
-        yearOfDeath: 1970,
+        yearOfBirth: 1066,
+        yearOfDeath: 2011,
       },
       {
         name: "Ray",
         yearOfBirth: 1962,
-        yearOfDeath: 2011,
+        
       },
       {
         name: "Jane",
@@ -29,7 +29,6 @@ const people = [
         yearOfDeath: 1941,
       },
     ]
-
       let verivicaFechas = 0; 
 
       let añoNacimiento0 = people[0].yearOfBirth;
@@ -79,8 +78,11 @@ const people = [
   
       });
       console.log(arregloNacimientos);
+
+
       let arregloMuertes = people.map(function(muerte){
 
+      
         return muerte.yearOfDeath;
 
         });     
@@ -93,6 +95,18 @@ const people = [
 
         diferenciaFecha[i] = arregloMuertes[i]-arregloNacimientos[i]; 
 
+        if(arregloMuertes[i] == void(0)){
+          let yearActual = 0;
+         fechActual = new Date();
+         arregloMuertes[i] = fechActual.getFullYear();
+       /* console.log(añoActual);
+        console.log(typeof añoActual);*/
+          console.log(arregloMuertes[i]);
+          console.log(typeof arregloMuertes[i]);
+
+          diferenciaFecha[i] = arregloMuertes[i]-arregloNacimientos[i]; 
+          
+        };
       }
 
       console.log(diferenciaFecha);
